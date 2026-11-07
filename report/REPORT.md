@@ -135,17 +135,20 @@ Số lượng prediction theo ngưỡng: xem output ô so sánh `0.20` / `0.35` 
 
 - 0.2: Giữ lại 17 vật thể
 - 0.6: Chỉ giữ lại 6 vật thể có confidence cao hơn.
+
 Khi tăng threshold từ 0.20 lên 0.60, số prediction giảm từ 17 xuống 6, tức giảm 11 prediction
 
 4. Khi hạ ngưỡng (giữ nhiều hộp hơn), người **reviewer** phải làm thêm việc gì?
 
 Khi hạ threshold từ 0.60 xuống 0.20, số prediction tăng từ 6 lên 17.
+
 Reviewer có thể gặp:
 - Hộp bao quanh vật thể không chính xác.
 - Một vật thể bị phát hiện nhiều lần (duplicate box).
 - Prediction sai class (nhận diện nhầm vật thể).
 - Hộp chỉ bao quanh một phần vật thể.
 - Vật thể nhỏ hoặc bị che khuất khó xác định.
+
 Reviewer cần:
 - Kiểm tra class có đúng không.
 - Kiểm tra bounding box có bao phủ đúng vật thể không.
@@ -153,6 +156,7 @@ Reviewer cần:
 - Phát hiện các box trùng lặp hoặc box không hợp lệ.
 - Kiểm tra những vật thể nhỏ, khó nhận diện để tránh bỏ sót.
 - Đối chiếu với guideline trước khi duyệt nhãn.
+
 Ví dụ: Ở threshold 0.20, model phát hiện thêm spoon, potted plant, dining table và bottle. Reviewer cần kiểm tra xem những vật thể này có thực sự xuất hiện trong ảnh và box có chính xác không.
 
 5. Viết **một quy tắc box** để người gán nhãn làm theo (áp dụng được cho nhiều ảnh, không chỉ ảnh này).
