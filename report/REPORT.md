@@ -133,8 +133,8 @@ Số lượng prediction theo ngưỡng: xem output ô so sánh `0.20` / `0.35` 
 
 3. Chọn hai ngưỡng (vd. 0.20 và 0.60). Mỗi ngưỡng có bao nhiêu prediction?
 
--0.2: Giữ lại 17 vật thể
--0.6: Chỉ giữ lại 6 vật thể có confidence cao hơn.
+- 0.2: Giữ lại 17 vật thể
+- 0.6: Chỉ giữ lại 6 vật thể có confidence cao hơn.
 Khi tăng threshold từ 0.20 lên 0.60, số prediction giảm từ 17 xuống 6, tức giảm 11 prediction
 
 4. Khi hạ ngưỡng (giữ nhiều hộp hơn), người **reviewer** phải làm thêm việc gì?
